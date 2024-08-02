@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: planet-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/planets_db
+    username: planets_user
+    password: planets_user
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: DEBUG
